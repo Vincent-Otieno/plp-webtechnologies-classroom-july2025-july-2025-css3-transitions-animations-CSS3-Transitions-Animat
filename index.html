@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sling Chic | Modern Fashion</title>
+    <!-- Use Tailwind CSS for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font for a clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 font-inter">
+    <div class="min-h-screen flex flex-col justify-center items-center p-8">
+        
+        <!-- Header -->
+        <header class="text-center py-10">
+            <h1 class="text-6xl font-bold text-gray-800 tracking-wider transition-colors duration-300">
+                Sling Chic
+            </h1>
+            <p class="text-lg text-gray-600 mt-2">Effortless Style. Redefined.</p>
+        </header>
+
+        <!-- Main Product Section -->
+        <main class="w-full max-w-5xl">
+            <h2 class="text-3xl font-semibold text-gray-700 text-center mb-10">Featured Collection</h2>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Product Card 1 -->
+                <div id="product-card-1" class="product-card bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <img src="https://placehold.co/400x400/F5E6E6/2D2D2D?text=Tote+Bag" alt="Tote Bag" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-xl font-bold text-gray-800">The Minimalist Tote</h3>
+                    <p class="text-gray-500 mt-1">$<span class="price">120.00</span></p>
+                    <button class="add-to-cart-btn w-full mt-4 py-2 rounded-xl text-white font-semibold bg-gray-900 hover:bg-gray-700 transition-colors duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div id="product-card-2" class="product-card bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <img src="https://placehold.co/400x400/E6E6F5/2D2D2D?text=Leather+Clutch" alt="Leather Clutch" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-xl font-bold text-gray-800">The Everyday Clutch</h3>
+                    <p class="text-gray-500 mt-1">$<span class="price">85.00</span></p>
+                    <button class="add-to-cart-btn w-full mt-4 py-2 rounded-xl text-white font-semibold bg-gray-900 hover:bg-gray-700 transition-colors duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div id="product-card-3" class="product-card bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <img src="https://placehold.co/400x400/E6F5E6/2D2D2D?text=Crossbody+Bag" alt="Crossbody Bag" class="rounded-lg mb-4 w-full h-auto">
+                    <h3 class="text-xl font-bold text-gray-800">The City Crossbody</h3>
+                    <p class="text-gray-500 mt-1">$<span class="price">150.00</span></p>
+                    <button class="add-to-cart-btn w-full mt-4 py-2 rounded-xl text-white font-semibold bg-gray-900 hover:bg-gray-700 transition-colors duration-300">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </main>
+        
+        <!-- Modal for showing animation -->
+        <div id="animation-modal" class="modal fixed inset-0 bg-gray-800 bg-opacity-70 flex justify-center items-center z-50 hidden">
+            <div class="modal-content bg-white p-8 rounded-xl text-center">
+                <div id="animated-circle" class="circle"></div>
+                <h3 class="text-xl font-semibold text-gray-800 mt-4">Product Added!</h3>
+                <p class="text-sm text-gray-500 mt-2">Thank you for your purchase.</p>
+                <button id="close-modal-btn" class="mt-6 px-6 py-2 rounded-lg text-white font-semibold bg-gray-900 hover:bg-gray-700 transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

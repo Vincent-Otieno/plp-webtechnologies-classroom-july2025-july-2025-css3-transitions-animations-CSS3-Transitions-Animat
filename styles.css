@@ -1,0 +1,42 @@
+/* Part 1: CSS3 Transitions and Animations */
+
+/* Base styles for the body and typography */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Keyframe animation for a pulsing effect on add to cart */
+@keyframes pulse-fill {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Keyframe animation for a fade-in effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* The circular element to be animated */
+.circle {
+    width: 6rem;
+    height: 6rem;
+    background-color: #6366f1; /* Tailwind purple-500 */
+    border-radius: 9999px; /* Tailwind full rounded */
+    animation: pulse-fill 1s ease-out;
+}
+
+/* Classes to be added/removed by JavaScript */
+.modal-fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+.modal {
+    transition: opacity 0.3s ease-in-out;
+}
